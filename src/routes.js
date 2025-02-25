@@ -16,6 +16,8 @@ import Transaksioff from './views/admin/Users/Transaksimanual'
 import Konfirmasi from './views/admin/Konfirmasi'
 import Laporan from './views/admin/component/Laporankeuangan'
 import Bukti from './views/admin/Bukti_pembayaran'
+import Berita from './views/admin/Berita/Berita'
+import BeritaDetail from './views/admin/Berita/Detail'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
@@ -67,30 +69,26 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
-
-
-
-
 const routes = [
-  { path: '/', exact: true, name: 'Home'},
-  { path: '/staff', exact: true, name: 'Users / Staff', element: Staff},
-  { path: '/admin', exact: true, name: 'Users / Admin', element: Admin},
-  { path: '/management/products', exact: true, name: 'Produk', element: Product},
-  { path: '/report', exact: true, name: 'Laporan', element: Report},
-  { path: '/transaction', exact: true, name: 'Transaksi', element: Transaction},
-  { path: '/online', exact: true, name: 'Transaksi Online', element: Online},
-  { path: '/offline', exact: true, name: 'Transaksi Offline', element: Offline},
-  { path: '/transactionoff', exact: true, name: 'Transaksi Offline', element: Transaksioff},
-  { path: '/transaction/:id', name: 'Transaksi / :id', element: TransactionDetail},
+  { path: '/', exact: true, name: 'Home' },
+  { path: '/staff', exact: true, name: 'Users / Staff', element: Staff },
+  { path: '/admin', exact: true, name: 'Users / Admin', element: Admin },
+  { path: '/management/products', exact: true, name: 'Produk', element: Product },
+  { path: '/report', exact: true, name: 'Laporan', element: Report },
+  { path: '/transaction', exact: true, name: 'Transaksi', element: Transaction },
+  { path: '/online', exact: true, name: 'Transaksi Online', element: Online },
+  { path: '/offline', exact: true, name: 'Transaksi Offline', element: Offline },
+  { path: '/transactionoff', exact: true, name: 'Transaksi Offline', element: Transaksioff },
+  { path: '/transaction/:id', name: 'Transaksi / :id', element: TransactionDetail },
   { path: '/dashboard', name: 'Dashboard', element: DashboardAdmin },
   { path: '/message', name: 'Pesan', element: Message },
   { path: '/user', name: 'Users / User', element: User },
-  { path: '/users/:id', name: 'Users /:id', element: Detail},
-  { path: '/konfirmasi', name: 'Konfirmasi', element: Konfirmasi},
-  { path: '/laporan', name: 'Konfirmasi', element: Laporan},
-  { path: '/bukti_pembayaran/:id', name: 'Bukti Pembayaran', element: Bukti},
-
-
+  { path: '/users/:id', name: 'Users /:id', element: Detail },
+  { path: '/konfirmasi', name: 'Konfirmasi', element: Konfirmasi },
+  { path: '/laporan', name: 'Konfirmasi', element: Laporan },
+  { path: '/bukti_pembayaran/:id', name: 'Bukti Pembayaran', element: Bukti },
+  { path: '/berita', name: 'Berita', element: Berita },
+  { path: '/berita/detail/:id', element: BeritaDetail },
 
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
